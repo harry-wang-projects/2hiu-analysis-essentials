@@ -1,0 +1,30 @@
+% set (variable value)	# assign value to variable
+% puts $variable		# output the value of $variable. Note the $ sign.
+% expr {expression}		# evaluate the mathematical expression. {} is not necessary.
+
+
+
+For example:
+% set myvar 5
+5
+% set x 3
+3
+% expr {$myvar * $x}
+15
+% set result {7 + $myvar ** $x}
+7 + $myvar ** $x	($result does not store a number!)
+% set result [expr {7 + $myvar ** $x}]
+132
+% puts “The value of result is: $result”
+The value of result is: 132
+
+
+
+
+llength: returns the length of a list
+	% llength {1 2 3}
+		3
+lindex: returns item at given index
+	lindex {1 2 3} 1
+		2
+
