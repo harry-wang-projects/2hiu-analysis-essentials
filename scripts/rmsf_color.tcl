@@ -40,7 +40,7 @@ for {set i 0} {$i < 21} {incr i} {
 for {set i 0} {$i < 30} {incr i} {
     set sel3 [atomselect top "resid [expr $i + 1] frame 0 and chain B"]
     $sel3 set beta [lindex $rmsf [expr $i + 21]]
-    puts $outfile "[expr {$i + 22}]\t$[lindex $rmsf [expr {i + 21}]]"
+    puts $outfile "[expr {$i + 22}]\t$[lindex $rmsf [expr {$i + 21}]]"
 }
 
 set sel4 [atomselect top "protein" frame 0]
